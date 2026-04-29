@@ -6,7 +6,26 @@
 2. 第 4 题第 (1) 小题的空格可取两个符号，这里取正号。
 3. 第 7 题按图示将 `O` 视为单位正方体的一个顶点，三条坐标轴分别沿三条棱方向。
 4. 第 13 题按“图中线矢量集合的线性张成维数”理解。
-5. 第 5 题和第 8 题需要图示，绘图代码见 [drawings.py](./drawings.py)，运行后生成的结果图已插入本文。
+5. 第 5 题和第 8 题需要图示，绘图代码见 [drawings.py](/Users/qianshuang/Project/PythonProject/RobotMechanismHomework/first/source/drawings.py)。
+
+## 运行方法
+
+依赖文件： [requirements.txt](/Users/qianshuang/Project/PythonProject/RobotMechanismHomework/first/source/requirements.txt)
+
+绘图脚本：
+
+```bash
+cd ../source
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python drawings.py
+```
+
+运行后会在 `../result/` 下生成：
+
+1. `q5_axis.png`
+2. `q8_force_family.png`
 
 ## 1. 过点 $r_1(1,1,0)$ 与 $r_2(-1,1,2)$ 的直线 Plucker 坐标
 
@@ -200,7 +219,7 @@ $$
 
 示意图如下：
 
-![第5题轴线示意图](./q5_axis.svg)
+![第5题轴线示意图](./q5_axis.png)
 
 ## 6. 运动旋量与约束旋量互易的物理意义
 
@@ -294,7 +313,7 @@ $$
 
 示意图如下：
 
-![第8题互易力旋量示意图](./q8_force_family.svg)
+![第8题互易力旋量示意图](./q8_force_family.png)
 
 ## 9. 求与给定 3 关节串联操作手互易的旋量系
 

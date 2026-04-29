@@ -1,5 +1,11 @@
 # 第 2 次作业解答
 
+## 运行方法
+
+依赖文件： [requirements.txt](/Users/qianshuang/Project/PythonProject/RobotMechanismHomework/second/source/requirements.txt)
+
+本次作业当前不包含绘图脚本，因此无需额外运行 Python 代码。
+
 ## 1. 4U 平行四边形机构的自由度与运动特点
 
 机构包含：

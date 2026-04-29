@@ -1,3 +1,7 @@
 .DS_Store
 .idea
-
+**/source/.venv/
+**/source/.uv-cache/
+**/source/.matplotlib/
+__pycache__/
+*.pyc

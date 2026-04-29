@@ -2,9 +2,28 @@
 
 ## 说明
 
-1. 第 1 题要求画机构简图，因此给出 Python 绘图代码 [drawings.py](./drawings.py)。
-2. 已运行绘图脚本并生成示意图，结果插入在本文中。
+1. 第 1 题要求画机构简图，因此给出 Python 绘图代码 [drawings.py](/Users/qianshuang/Project/PythonProject/RobotMechanismHomework/third/source/drawings.py)。
+2. 机械简图采用平面视角，目的是更清晰地表达机构拓扑关系。
 3. 简图强调机构拓扑关系与自由度含义，不追求工程装配细节。
+
+## 运行方法
+
+依赖文件： [requirements.txt](/Users/qianshuang/Project/PythonProject/RobotMechanismHomework/third/source/requirements.txt)
+
+绘图脚本：
+
+```bash
+cd ../source
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python drawings.py
+```
+
+运行后会在 `../result/` 下生成：
+
+1. `q1_3rrr.png`
+2. `q1_3rpr.png`
 
 ## 1. 基于转动副与移动副，综合两个三支链、具有平面 3 自由度运动的并联机构
 
@@ -32,7 +51,7 @@ $$
 
 简图如下：
 
-![3-RRR 平面并联机构简图](./q1_3rrr.svg)
+![3-RRR 平面并联机构简图](./q1_3rrr.png)
 
 该机构满足题目要求，因为它的动平台输出为标准平面 `2T1R` 运动。
 
@@ -52,7 +71,7 @@ $$
 
 简图如下：
 
-![3-RPR 平面并联机构简图](./q1_3rpr.svg)
+![3-RPR 平面并联机构简图](./q1_3rpr.png)
 
 因此，第 1 题可以给出以下两个满足条件的三支链并联机构：
 
