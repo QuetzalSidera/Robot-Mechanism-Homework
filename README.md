@@ -31,7 +31,7 @@
 示例命令：
 
 ```bash
-git clone <你的仓库地址>
+git clone https://github.com/QuetzalSidera/Robot-Mechanism-Homework.git
 cd RobotMechanismHomework
 codex "读取 first/ second/ third 下的题图，完成机器人机构学作业；每次作业的答案写入对应目录 result/answer.md；若需要机械简图，则在各作业目录的 source/ 中编写 matplotlib 绘图代码，在 source/.venv 中安装依赖、运行并把输出图片写入 result/。"
 ```
