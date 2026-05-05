@@ -20,7 +20,7 @@
 
 ## 目录约定
 
-1. `first/`、`second/`、`third/` 分别对应第 1、2、3 次作业。
+1. `first/`、`second/`、`third/`、`forth/` 分别对应第 1、2、3、4 次作业。
 2. 每个作业目录内的题目图片按 `{index}.png` 命名。
 3. 每个作业目录内应放置：
    - 根目录：仅放题目图片，如 `1.png`、`2.png`。
@@ -40,7 +40,7 @@
 5. 绘图代码优先使用 `matplotlib` 输出 `png`，视角以清晰表达机构拓扑关系为准，不强求 3D 视角。
 6. 若使用第三方包，必须把虚拟环境创建在对应作业的 `source/.venv` 下，不要放在项目根目录，也不要污染系统 Python。
 7. 运行绘图脚本，确认输出图片真实生成到 `result/`，再插入 `result/answer.md`。
-8. 只在对应作业目录下写该作业的结果，不把三次作业混写到同一文件。
+8. 只在对应作业目录下写该作业的结果，不把四次作业混写到同一文件。
 
 ## 启动与使用方式
 
@@ -49,7 +49,7 @@
 ```bash
 git clone <你的仓库地址>
 cd RobotMechanismHomework
-codex --full-auto --sandbox workspace-write "读取 first/ second/ third 下的题图，完成每次作业，并把答案写到各目录的 result/answer.md；若题目需要图示，则在各作业目录的 source/ 中编写 matplotlib 绘图代码，在 source/.venv 中安装依赖，运行后把生成的图片写入 result/。"
+codex --full-auto --sandbox workspace-write "读取 first/ second/ third/ forth 下的题图，完成每次作业，并把答案写到各目录的 result/answer.md；若题目需要图示，则在各作业目录的 source/ 中编写 matplotlib 绘图代码，在 source/.venv 中安装依赖，运行后把生成的图片写入 result/。"
 ```
 
 如果希望在启动时显式附加图片，可使用：
@@ -61,6 +61,8 @@ codex --full-auto --sandbox workspace-write \
   --image second/1.png \
   --image third/1.png \
   --image third/2.png \
+  --image forth/1.png \
+  --image forth/2.png \
   "根据这些题图完成机器人机构学作业，结果分别写入各目录。"
 ```
 

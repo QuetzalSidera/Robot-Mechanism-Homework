@@ -1,6 +1,6 @@
 # 机器人机构学作业 Agent 项目
 
-本项目用于让 AI Agent 基于题目图片完成机器人机构学作业。仓库中包含三次作业，题目图片分别放在 `first/`、`second/`、`third/`
+本项目用于让 AI Agent 基于题目图片完成机器人机构学作业。仓库中包含四次作业，题目图片分别放在 `first/`、`second/`、`third/`、`forth/`
 目录下，文件名按 `{index}.png` 编排。
 
 ## 前置要求
@@ -23,7 +23,7 @@
 推荐按下面 3 步使用本项目：
 
 1. 将作业题目截图放在对应目录下。
-   例如：`first/1.png`、`first/2.png`、`second/1.png`、`third/1.png`、`third/2.png`。
+   例如：`first/1.png`、`first/2.png`、`second/1.png`、`third/1.png`、`third/2.png`、`forth/1.png`、`forth/2.png`。
 2. 启动 Agent，并明确告诉 Agent 按照本项目的目录约定、`AGENT.md` 与 `README.md` 要求完成对应作业。
 3. 在对应作业目录的 `result/` 下查找结果。
    例如：`first/result/answer.md`、`third/result/q1_3rrr.png`。
@@ -33,7 +33,7 @@
 ```bash
 git clone https://github.com/QuetzalSidera/Robot-Mechanism-Homework.git
 cd RobotMechanismHomework
-codex "读取 first/ second/ third 下的题图，完成机器人机构学作业；每次作业的答案写入对应目录 result/answer.md；若需要机械简图，则在各作业目录的 source/ 中编写 matplotlib 绘图代码，在 source/.venv 中安装依赖、运行并把输出图片写入 result/。"
+codex "读取 first/ second/ third/ forth 下的题图，完成机器人机构学作业；每次作业的答案写入对应目录 result/answer.md；若需要机械简图，则在各作业目录的 source/ 中编写 matplotlib 绘图代码，在 source/.venv 中安装依赖、运行并把输出图片写入 result/。"
 ```
 
 如果你使用的 Agent 不自带 OCR / 图像理解，可以先为客户端接入视觉 MCP，再让 Agent 工作。以智谱视觉 MCP 为例，官方文档给出的
@@ -60,6 +60,8 @@ codex --full-auto --sandbox workspace-write \
   --image second/1.png \
   --image third/1.png \
   --image third/2.png \
+  --image forth/1.png \
+  --image forth/2.png \
   "根据这些题图完成作业，并整理输出。"
 ```
 
@@ -104,7 +106,7 @@ RobotMechanismHomework/
 │   │   └── requirements.txt
 │   └── result/
 │       └── answer.md
-└── third/
+├── third/
     ├── 1.png
     ├── 2.png
     ├── source/
@@ -115,18 +117,25 @@ RobotMechanismHomework/
         ├── answer.md
         ├── q1_3rrr.png
         └── q1_3rpr.png
+└── forth/
+    ├── 1.png
+    ├── 2.png
+    ├── source/
+    │   ├── README.md
+    │   └── requirements.txt
+    └── result/
+        └── answer.md
 ```
 
 ## AI 应如何操作本项目
 
 1. 从根目录读取 `AGENT.md`。
-2. 扫描 `first/`、`second/`、`third/` 下的题目图片。
+2. 扫描 `first/`、`second/`、`third/`、`forth/` 下的题目图片。
 3. 针对每次作业，在对应目录内维护 `result/answer.md`。
 4. 若某题需要图示，则在对应目录内新增或更新 `source/` 下的绘图代码。
 5. 运行绘图脚本后，将输出图片写入 `result/`，并在 `result/answer.md` 中引用。
 
-建议 Agent
-首次进入仓库后，先阅读根目录的 [AGENT.md](/Users/qianshuang/Project/PythonProject/RobotMechanismHomework/AGENT.md) 再开始工作。
+建议 Agent 首次进入仓库后，先阅读根目录的 [AGENT.md](/Users/qianshuang/Desktop/homework1/AGENT.md) 再开始工作。
 
 ## 推荐工作方式
 
